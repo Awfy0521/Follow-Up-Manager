@@ -136,6 +136,9 @@
   padding: 16rpx 28rpx;
   background: var(--color-card);
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
 }
 
 .search-wrap {
@@ -146,6 +149,24 @@
   padding: 0 24rpx;
   height: 72rpx;
   border: 1rpx solid var(--color-border);
+  flex: 1;
+}
+
+.search-btn {
+  background: var(--color-accent);
+  border-radius: 40rpx;
+  padding: 0 32rpx;
+  height: 72rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.search-btn-text {
+  color: #FFFFFF;
+  font-size: 28rpx;
+  font-weight: 500;
 }
 
 .search-icon {
