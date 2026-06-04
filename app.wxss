@@ -1,0 +1,27 @@
+/**app.wxss**/
+page {
+  --color-primary: #1A2332;
+  --color-primary-light: #2A3A4E;
+  --color-accent: #4A90D9;
+  --color-accent-light: #6BA5E7;
+  --color-accent-soft: #E8F0FE;
+  --color-success: #34A77B;
+  --color-text: #1A1D21;
+  --color-text-secondary: #5F6B7A;
+  --color-text-muted: #9DA5B0;
+  --color-bg: #F2F4F7;
+  --color-card: #FFFFFF;
+  --color-border: #E1E5EB;
+  --color-border-light: #ECF0F4;
+  --color-shadow: rgba(26, 35, 50, 0.05);
+  --radius-sm: 12rpx;
+  --radius-md: 16rpx;
+  --radius-lg: 24rpx;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+}

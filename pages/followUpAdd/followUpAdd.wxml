@@ -1,0 +1,81 @@
+<view class="page">
+  <!-- Header -->
+  <view class="header" style="padding-top: {{statusBarHeight}}px;">
+    <view class="header-back" bindtap="cancel">
+      <text class="back-arrow">‹</text>
+    </view>
+    <text class="header-title">新建跟进记录</text>
+    <view class="header-placeholder"></view>
+  </view>
+
+  <!-- Form -->
+  <view class="form">
+    <view class="form-section-header">
+      <view class="section-dot"></view>
+      <text class="section-title">填写跟进信息</text>
+    </view>
+
+    <view class="form-group">
+      <text class="label">沟通主题</text>
+      <view class="input-wrap">
+        <input
+          class="input"
+          placeholder="请输入沟通主题"
+          placeholder-class="placeholder"
+          value="{{title}}"
+          bindinput="onTitleInput"
+          maxlength="50"
+        />
+      </view>
+    </view>
+
+    <view class="form-group">
+      <text class="label">沟通详情</text>
+      <view class="textarea-wrap">
+        <textarea
+          class="textarea"
+          placeholder="请输入沟通详情"
+          placeholder-class="placeholder"
+          value="{{content}}"
+          bindinput="onContentInput"
+          auto-height
+          maxlength="500"
+        />
+      </view>
+    </view>
+
+    <view class="form-group">
+      <text class="label">下次沟通时间</text>
+      <picker mode="date" bindchange="onTimeChange">
+        <view class="picker {{nextTime ? '' : 'placeholder-state'}}">
+          <text class="picker-value">{{nextTime || '请选择日期'}}</text>
+          <text class="picker-arrow">›</text>
+        </view>
+      </picker>
+    </view>
+
+    <view class="form-group">
+      <text class="label">下次沟通内容</text>
+      <view class="textarea-wrap">
+        <textarea
+          class="textarea"
+          placeholder="请输入"
+          placeholder-class="placeholder"
+          value="{{nextContent}}"
+          bindinput="onNextContentInput"
+          auto-height
+          maxlength="500"
+        />
+      </view>
+    </view>
+  </view>
+
+  <!-- Buttons -->
+  <view class="btn-group">
+    <button class="btn btn-primary" bindtap="save" disabled="{{submitting}}">
+      <text class="btn-text" wx:if="{{!submitting}}">保存</text>
+      <text class="btn-text" wx:else>保存中...</text>
+    </button>
+    <button class="btn btn-secondary" bindtap="cancel">取消</button>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "navigationStyle": "custom",
+  "navigationBarTitleText": "添加跟进记录",
+  "navigationBarBackgroundColor": "#1A2332",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#F2F4F7"
+}
