@@ -37,7 +37,7 @@ Page({
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
     this.setData({
-      nextTime: `${year}-${month}-${day} ${hours}:${minutes}:00`
+      nextTime: `${year}-${month}-${day}T${hours}:${minutes}:00`
     });
   },
 

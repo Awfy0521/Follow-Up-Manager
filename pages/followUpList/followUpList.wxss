@@ -426,8 +426,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 16rpx;
-  padding-bottom: calc(16rpx + env(safe-area-inset-bottom));
+  padding-top: 12rpx;
+  padding-bottom: calc(4rpx + env(safe-area-inset-bottom));
   width: 100%;
   box-sizing: border-box;
 }
@@ -458,6 +458,6 @@
 .add-label {
   font-size: 20rpx;
   color: var(--color-text-muted);
-  margin-top: 6rpx;
-  margin-bottom: 4rpx;
+  margin-top: 4rpx;
+  margin-bottom: 0;
 }
