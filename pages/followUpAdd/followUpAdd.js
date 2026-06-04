@@ -1,4 +1,4 @@
-const storageSkill = require('../../utils/skills/storage-skill');
+const api = require('../../utils/api');
 const validateSkill = require('../../utils/skills/validate-skill');
 
 Page({
@@ -68,16 +68,15 @@ Page({
 
     this.setData({ submitting: true, errors: [] });
 
-    storageSkill.addRecord(data);
-
-    wx.showToast({
-      title: '保存成功',
-      icon: 'success'
+    api.addRecord(data).then(() => {
+      wx.showToast({ title: '保存成功', icon: 'success' });
+      setTimeout(() => {
+        wx.navigateBack({ animationType: 'none' });
+      }, 1500);
+    }).catch(err => {
+      this.setData({ submitting: false });
+      wx.showToast({ title: err.message || '保存失败', icon: 'none' });
     });
-
-    setTimeout(() => {
-      wx.navigateBack({ animationType: 'none' });
-    }, 1500);
   },
 
   cancel() {

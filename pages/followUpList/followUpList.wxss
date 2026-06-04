@@ -395,6 +395,29 @@
   color: var(--color-text-muted);
 }
 
+/* ---- Loading / No More ---- */
+.loading-state {
+  display: flex;
+  justify-content: center;
+  padding: 32rpx 0;
+}
+
+.loading-text {
+  font-size: 26rpx;
+  color: var(--color-text-muted);
+}
+
+.no-more {
+  display: flex;
+  justify-content: center;
+  padding: 32rpx 0;
+}
+
+.no-more-text {
+  font-size: 24rpx;
+  color: var(--color-text-muted);
+}
+
 /* ---- Bottom Bar ---- */
 .bottom-bar {
   flex-shrink: 0;
